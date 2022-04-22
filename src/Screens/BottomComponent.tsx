@@ -89,9 +89,9 @@ export const BottomComponent = ({ animatedStylesBottom, activeTime }: any) => {
   useEffect(() => {
     if (activeTime == time.NIGHT) {
       icon_opacity.value = 1;
-      temperaturScale.value = 1;
-      temperaturTop.value = 0;
       setTimeout(() => {
+        temperaturScale.value = 1;
+        temperaturTop.value = 0;
         moon_right.value = 0;
         moon_left.value = MOON_IMAGE.center_position;
         moon_top.value = MOON_IMAGE.center_position_top;
@@ -99,9 +99,9 @@ export const BottomComponent = ({ animatedStylesBottom, activeTime }: any) => {
       }, 200);
     } else {
       icon_opacity.value = 0;
-      temperaturScale.value = 0.85;
-      temperaturTop.value = -HEIGHT_2_3RD / 1.25 / 1.5;
       setTimeout(() => {
+        temperaturScale.value = 0.85;
+        temperaturTop.value = -HEIGHT_2_3RD / 1.25 / 1.5;
         moon_right.value = MOON_IMAGE.right;
         moon_left.value = MOON_IMAGE.left;
         moon_top.value = MOON_IMAGE.top;
